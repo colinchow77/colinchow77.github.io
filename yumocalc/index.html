@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Badminton Cost Calculator</title>
+    <meta name="description" content="Badminton Cost Calculator">
+    <link rel="stylesheet" href="./css/style-n.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js" async=""></script>
+    <!-- link rel="manifest" href="https://www.unitconverters.net/manifest.json" -->
+
+</head>
+
+<body>
+
+    <div id="clear"></div>
+    <div id="contentout">
+        <div id="content">
+            <img src="./img/calculator.svg" width="22" height="31" align="right" border="0" onclick="quickCaclShow(&#39;&#39;);" alt="calculator">
+            <h1>Badminton Cost Calculator</h1>
+            <p>Provider # of players and # of birdies used</p>
+            <div id="unquickcalc" style="display:none;"></div>
+            <form>
+                <div id="undctable">
+                    <table align="center" cellpadding="5">
+                        <tbody>
+                            <tr>
+                                <td class="bigtext uclabel" align="right"><label for="ucCourts"># of Courts:</label></td>
+                                <td><input type="text" name="ucCourts" class="ucdcinput" id="ucCourts" onkeyup="ucDCUpdateResult(0);" autofocus=""></td>
+                                <td class="bigtext"><label for="ucCourts"><b>@ $26/hr</b></label></td>
+                            </tr>
+                            <tr>
+                                <td class="bigtext uclabel" align="right"><label for="ucShuttles"># of shuttles:</label></td>
+                                <td><input type="text" name="ucShuttles" class="ucdcinput" id="ucShuttles" onkeyup="ucDCUpdateResult(1);"></td>
+                                <td class="bigtext"><label for="ucShuttles"><b>@ $2/shuttle</b></label></td>
+                            </tr>
+                            <tr>
+                                <td class="bigtext uclabel" align="right"><label for="ucPlayers"># of players:</label></td>
+                                <td><input type="text" name="ucPlayers" class="ucdcinput" id="ucPlayers" onkeyup="ucDCUpdateResult(1);"></td>
+                                <td class="bigtext"><label for="ucPlayers"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="uclabel">&nbsp;</td>
+                                <td align="center">
+                                    <input type="hidden" name="ucCostPerCourt" id="ucCostPerCourt" value="26">
+                                    <input type="hidden" name="ucCostPerShuttle" id="ucCostPerShuttle" value="2">
+                                    <input type="submit" value="Calculate" class="ucdcsubmit" onclick="ucDCUpdateResult(processingType);return false;"> &nbsp;
+                                    <input type="reset" value="Clear" class="ucdcsubmit">
+                                </td>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="ucresult" class="ucresulttext"></div>
+                </div>
+            </form>
+            <script>
+                noValidation = 0;
+                var processingType = 0;
+            </script>
+
+
+            <div id="clear"></div>
+            <div id="footer">
+                <div id="footerin">
+                    <div id="footernav">Based on Tree math.</a>
+                    </div>
+                </div>
+            </div>
+
+</html>
